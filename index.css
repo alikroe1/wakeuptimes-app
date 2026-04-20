@@ -7,14 +7,14 @@ body {
 }
 
 h1 {
-  color: purple;
+  color: red;
 }
 
 p {
   line-height: 1.5;
 }
 
-#calc-btn {
+#myButton {
   font-size: 1.5rem;
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
@@ -24,7 +24,17 @@ p {
   cursor: pointer;
 }
 
-#calc-btn:hover {
+#myButton:hover {
   background-color: #333;
   color: #fff;
+}
+
+.cycle {
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #333;
+  background-color: #fff;
+  color: #333;
+  margin: 0.5rem;
 }

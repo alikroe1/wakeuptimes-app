@@ -13,6 +13,7 @@ function calcWakeupTimes() {
 
         const cycleDiv = document.createElement("div");
         cycleDiv.setAttribute("id", `cycle-${i}`);
+        cycleDiv.setAttribute("class", "cycle");
         cycleDiv.textContent = wakeTime.toLocaleString("en-US", { timeStyle: "short"});
         myDiv.appendChild(cycleDiv);
     }
