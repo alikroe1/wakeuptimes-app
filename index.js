@@ -1,3 +1,6 @@
+const calcButton = document.getElementById("myButton");
+const myDiv = document.getElementById("displayArea");
+
 function calcWakeupTimes() {
     const sleepTime = new Date()
     sleepTime.setMinutes(sleepTime.getMinutes() + 14);
@@ -7,8 +10,7 @@ function calcWakeupTimes() {
         wakeTime.setMinutes(wakeTime.getMinutes() + 90);
         cycleTimes.push(wakeTime.toLocaleString("en-US", { timeStyle: "short"}));
     }
-
-    console.log("Wake up times: ", cycleTimes.join(", "));
+    myDiv.textContent = `Wake up times: ${cycleTimes.join(", ")}`;
 }
 
-calcWakeupTimes();
+calcButton.onclick = calcWakeupTimes;
