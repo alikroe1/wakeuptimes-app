@@ -1,5 +1,9 @@
 const calcButton = document.getElementById("myButton");
-const myDiv = document.getElementById("displayArea");
+const myDiv = document.getElementById("myDiv");
+const resultSection = document.getElementById("result-section");
+const promptSection = document.getElementById("prompt-section");
+const returnButton = document.getElementById("return-btn");
+const refreshButton = document.getElementById("refresh-btn");
 
 function calcWakeupTimes() {
     const sleepTime = new Date();
@@ -17,6 +21,15 @@ function calcWakeupTimes() {
         cycleDiv.textContent = wakeTime.toLocaleString("en-US", { timeStyle: "short"});
         myDiv.appendChild(cycleDiv);
     }
+    resultSection.classList.remove("hidden");
+    promptSection.classList.add("hidden");
+}
+
+function goBack() {
+    resultSection.classList.add("hidden");
+    promptSection.classList.remove("hidden");
 }
 
 calcButton.onclick = calcWakeupTimes;
+returnButton.onclick = goBack;
+refreshButton.onclick = calcWakeupTimes;
