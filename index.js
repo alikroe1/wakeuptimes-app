@@ -4,6 +4,7 @@ const resultSection = document.getElementById("result-section");
 const promptSection = document.getElementById("prompt-section");
 const returnButton = document.getElementById("return-btn");
 const refreshButton = document.getElementById("refresh-btn");
+const moon = document.getElementById("img-container")
 
 function calcWakeupTimes() {
     const sleepTime = new Date();
@@ -23,11 +24,13 @@ function calcWakeupTimes() {
     }
     resultSection.classList.remove("hidden");
     promptSection.classList.add("hidden");
+    moon.classList.add("hidden");
 }
 
 function goBack() {
     resultSection.classList.add("hidden");
     promptSection.classList.remove("hidden");
+    moon.classList.remove("hidden");
 }
 
 calcButton.onclick = calcWakeupTimes;
